@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cadastro de endereços</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>Cadastro de endereços</h1>
+
+  <form id="formEndereco">
+    <fieldset>
+      <legend>Novo endereço</legend>
+
+      <div class="linha">
+        <label>
+          <span>CEP</span>
+          <input name="cep" placeholder="85860-000">
+        </label>
+        <label style="flex: 3 1 300px;">
+          <span>Logradouro *</span>
+          <input name="logradouro" required>
+        </label>
+        <label style="flex: 0 1 100px;">
+          <span>Número</span>
+          <input name="numero">
+        </label>
+      </div>
+
+      <div class="linha">
+        <label>
+          <span>Complemento</span>
+          <input name="complemento">
+        </label>
+        <label>
+          <span>Bairro</span>
+          <input name="bairro">
+        </label>
+      </div>
+
+      <div class="linha">
+        <label style="flex: 3 1 240px;">
+          <span>Cidade *</span>
+          <input name="cidade" required>
+        </label>
+        <label style="flex: 0 1 80px;">
+          <span>UF *</span>
+          <input name="uf" maxlength="2" required>
+        </label>
+      </div>
+
+      <button type="submit">Salvar endereço</button>
+      <p id="aviso"></p>
+    </fieldset>
+  </form>
+
+  <h2>Endereços cadastrados</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Logradouro</th>
+        <th>Nº</th>
+        <th>Bairro</th>
+        <th>Cidade</th>
+        <th>UF</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody id="corpoTabela"></tbody>
+  </table>
+
+  <script src="script.js">
+    
+  </script>
+
+</body>
+</html>
